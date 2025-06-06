@@ -50,3 +50,70 @@ footer {
   background-color: #eee;
   margin-top: 2rem;
 }
+
+main h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.form-container {
+  max-width: 600px;
+  background: #ffffff;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.campo {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.grupo-endereco {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.botao {
+  background-color: #009688;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.botao:hover {
+  background-color: #00796b;
+}
+
+#mensagem {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
