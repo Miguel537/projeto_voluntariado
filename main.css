@@ -117,3 +117,38 @@ main h2 {
   font-weight: bold;
   color: green;
 }
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filtros input, .filtros select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #009688;
+}
