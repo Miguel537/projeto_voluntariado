@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formCadastro");
   const mensagem = document.getElementById("mensagem");
   const cepInput = document.getElementById("cep");
+  const numero = document.getElementById("numero").value;
+
 
   // Evento para buscar o endereço quando digitar o CEP
   cepInput.addEventListener("blur", async () => {
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("bairro").value = endereco.bairro;
         document.getElementById("cidade").value = endereco.localidade;
         document.getElementById("estado").value = endereco.uf;
+        document.getElementById("numero").value = endereco.numero;
       } else {
         mensagem.textContent = "CEP não encontrado.";
       }
@@ -33,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bairro: document.getElementById("bairro").value,
       cidade: document.getElementById("cidade").value,
       estado: document.getElementById("estado").value,
+      numero: document.getElementById("numero").value,
       contato: document.getElementById("contato").value.trim(),
     };
 
@@ -55,5 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("bairro").value = "";
     document.getElementById("cidade").value = "";
     document.getElementById("estado").value = "";
+    document.getElementById("numero") = "";
   });
 });
