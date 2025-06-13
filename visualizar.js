@@ -11,13 +11,12 @@ function exibirNecessidades(lista) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <h3>${necessidade.titulo}</h3>
-      <p><strong>Instituição:</strong> ${necessidade.instituicao}</p>
-      <p><strong>Tipo de Ajuda:</strong> ${necessidade.tipoAjuda}</p>
-      <p><strong>Descrição:</strong> ${necessidade.descricao}</p>
-      <p><strong>Endereço:</strong> ${necessidade.rua}, ${necessidade.numero} - ${necessidade.bairro}, ${necessidade.cidade} - ${necessidade.estado}</p>
-      <p><strong>Contato:</strong> ${necessidade.contato}</p>
-    `;
+                <h3>${necessidade.titulo}</h3>
+                <p><strong>Instituição:</strong> ${necessidade.instituicao}</p>
+                <p><strong>Tipo de Ajuda:</strong> ${necessidade.tipoAjuda}</p>
+                <button onclick="mostrarDetalhes(${JSON.stringify(necessidade).replace(/"/g, '&quot;')})">Ver detalhes</button>
+                 `;
+
     container.appendChild(card);
   });
 }
