@@ -41,3 +41,20 @@ document.getElementById("filtroTipoAjuda").addEventListener("change", filtrar);
 
 // Mostrar tudo ao carregar
 filtrar();
+
+function mostrarDetalhes(necessidade) {
+  const detalhes = document.getElementById("detalhes");
+  detalhes.innerHTML = `
+    <h2>${necessidade.titulo}</h2>
+    <p><strong>Instituição:</strong> ${necessidade.instituicao}</p>
+    <p><strong>Tipo de Ajuda:</strong> ${necessidade.tipoAjuda}</p>
+    <p><strong>Descrição:</strong> ${necessidade.descricao}</p>
+    <p><strong>Endereço:</strong> ${necessidade.rua}, ${necessidade.numero} - ${necessidade.bairro}, ${necessidade.cidade} - ${necessidade.estado}</p>
+    <p><strong>Contato:</strong> ${necessidade.contato}</p>
+  `;
+  document.getElementById("modal").style.display = "block";
+}
+
+function fecharModal() {
+  document.getElementById("modal").style.display = "none";
+}
