@@ -60,5 +60,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("cidade").value = "";
     document.getElementById("estado").value = "";
     document.getElementById("numero") = "";
+
+        const lista = JSON.parse(localStorage.getItem("necessidades") || "[]");
+        lista.push(novaNecessidade);
+        localStorage.setItem("necessidades", JSON.stringify(lista));
+
+        mensagem.textContent = "Necessidade cadastrada com sucesso!";
+        mensagem.style.color = "green";
+        form.reset();
   });
 });
