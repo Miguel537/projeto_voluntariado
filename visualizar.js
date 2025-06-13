@@ -58,3 +58,17 @@ function mostrarDetalhes(necessidade) {
 function fecharModal() {
   document.getElementById("modal").style.display = "none";
 }
+
+const botaoTopo = document.getElementById("topo");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    botaoTopo.style.display = "block";
+  } else {
+    botaoTopo.style.display = "none";
+  }
+});
+
+botaoTopo.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

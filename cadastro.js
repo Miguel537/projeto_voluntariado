@@ -69,4 +69,18 @@ document.addEventListener("DOMContentLoaded", () => {
         mensagem.style.color = "green";
         form.reset();
   });
-});
+
+  const contatoInput = document.getElementById("contato");
+
+contatoInput.addEventListener("input", () => {
+  let valor = contatoInput.value.replace(/\D/g, "");
+  if (valor.length > 0) {
+    valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
+  }
+  if (valor.length > 9) {
+    valor = valor.replace(/(\d{5})(\d{4})$/, "$1-$2");
+  } else if (valor.length > 6) {
+    valor = valor.replace(/(\d{4})(\d{0,4})$/, "$1-$2");
+  }
+  contatoInput.value = valor;
+});});
